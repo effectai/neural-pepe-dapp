@@ -3,7 +3,7 @@
     <div class="container mt-6">
         <div class="has-text-centered pt-6">
           <h1 class="title is-2 mb-5">🐸 Effect Network Neural Pepe 🐸</h1>
-          <img v-if="!account" src="https://neuralpepe.com/api/pepe/avatar/9" style="width:400px; height:auto;" class="mb-5">
+          <img v-if="!account" src="https://neuralpepe.com/api/pepe/avatar/4084" style="width:400px; height:auto;" class="mb-5">
           <p v-if="!account" class="mb-6">
             The first AI-(de)generated collectibles on BSC. ⛓ <br>
             Only 7777 neural Pepe's will ever exist. 🤯 <br>

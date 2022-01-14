@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mb-6">
     <div class="mb-3 has-text-centered">
       <p class="has-text-success">Connected Effect Account: {{account.accountName}}</p>
     </div>
@@ -9,7 +9,7 @@
       </h1>
     <form action="#" onsubmit="return false">
         <div class="field mb-5">
-            <input class="input" type="number" v-model="idInput" min="1" max="7777" name="pepe" placeholder="Pepe ID">
+            <input class="input" type="number" v-model="idInput" min="0" max="7777" name="pepe" placeholder="Pepe ID">
         </div>
         <div class="buttons is-justify-content-center	">
           <button @click="searchPepe" class="button is-primary is-light">Search Pepe</button>
@@ -77,16 +77,16 @@ export default Vue.extend({
   components: {},
   methods: {
     searchPepe () {
-      if (this.idInput > 0 && this.idInput < 7776) {
+      if (this.idInput >= 0 && this.idInput <= 7776) {
         this.currentPepe = {}
         this.currentPepe.id = this.idInput;
-        this.currentPepe.url = `https://neuralpepe.com/api/pepe/avatar/${this.currentPepe.id}`;
+        this.currentPepe.url = `http://45.89.66.194/${this.currentPepe.id}.png`;
       }
     },
     addRandomPepe () {
       this.currentPepe = {}
       this.currentPepe.id =  Math.floor(Math.random() * 7776) + 1;
-      this.currentPepe.url = `https://neuralpepe.com/api/pepe/avatar/${this.currentPepe.id}`;
+      this.currentPepe.url = `http://45.89.66.194/${this.currentPepe.id}.png`;
     },
     addToBatch () {
       this.pepes.push(this.currentPepe)
