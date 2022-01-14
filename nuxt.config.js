@@ -3,7 +3,7 @@ export default {
   target: 'static',
   ssr: false,
   router: {
-    base: '/neural-pepe/'
+    base: '/neural-pepe-dapp/'
   },
   generate: {
     fallback: true,
